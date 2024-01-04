@@ -1,7 +1,7 @@
 <?php
 
 declare(strict_types=1);
-//include  "functions.php";
+include  "functions.php";
 
 require __DIR__ . "/../../vendor/autoload.php";
 
