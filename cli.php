@@ -10,4 +10,6 @@ $db = new Database('mysql', [
     'dbname' => 'phpiggy',
 ], 'root', '@Yttrgh1');
 
-echo "Connected to database";
+$sqlFile = file_get_contents("./database.sql");
+
+$db->connection->query($sqlFile);
