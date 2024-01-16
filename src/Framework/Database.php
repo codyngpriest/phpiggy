@@ -8,7 +8,7 @@ use PDO, PDOException, PDOStatement;
 
 class Database
 {
-    private PDO $connection;
+    public PDO $connection;
     private PDOStatement $stmt;
 
     public function __construct(
@@ -52,5 +52,10 @@ class Database
     public function id()
     {
         return $this->connection->lastInsertId();
+    }
+
+    public function findall()
+    {
+        return $this->stmt->fetchAll();
     }
 }
